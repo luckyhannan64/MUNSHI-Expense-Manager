@@ -6,50 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".login_activity"
     android:orientation="vertical"
-    android:weightSum="3"
     >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_height="200dp"
         android:background="#6F0581"
         >
     </LinearLayout>
 
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userfrag"
+        android:name="com.example.munshi_expensemanager.FragmentLogin"
+        ></fragment>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginTop="10dp"
-        android:layout_weight="2"
         android:background="@color/white"
+
         >
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="LOGIN"
-            android:textSize="20dp"
-            android:layout_marginLeft="145dp"
             android:backgroundTint="#D11616"
+            android:text="LOGIN"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
-            ></Button>
+            android:textSize="20dp"></Button>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:weightSum="2"
+            android:padding="5dp"
+            >
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SIGN UP"
-            android:textSize="20dp"
-            android:layout_marginLeft="132dp"
             android:backgroundTint="#D11616"
+            android:text="SIGN UP"
             android:textColor="@color/black"
-            ></Button>
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:textSize="20dp"></Button>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SKIP"
             android:textSize="20dp"
-            android:layout_marginLeft="145dp"
+            android:layout_margin="10dp"
             android:backgroundTint="#D11616"
+            android:layout_weight="1"
             android:textColor="@color/black"
             ></Button>
     </LinearLayout>
