@@ -8,16 +8,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+public class sign_up_frag extends Fragment {
 
-public class FragmentLogin extends Fragment {
+   View view;
 
-    View view;
+    public sign_up_frag() {
+
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        view =  inflater.inflate(R.layout.fragment_login, container, false);
+        view = inflater.inflate(R.layout.fragment_sign_up_frag, container, false);
         return view;
     }
 }
