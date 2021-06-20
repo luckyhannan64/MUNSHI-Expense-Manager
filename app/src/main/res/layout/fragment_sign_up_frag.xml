@@ -9,6 +9,7 @@
     >
 
     <EditText
+        android:layout_marginTop="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="enter your best email"
@@ -24,7 +25,6 @@
         android:id="@+id/un"
         android:layout_marginTop="10dp"
         android:textAlignment="center"
-
         ></EditText>
     <EditText
         android:layout_width="match_parent"
@@ -50,11 +50,14 @@
         ></EditText>
 
     <Button
+        android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="sign up"
         android:layout_below="@id/rpw"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:id="@+id/sumbitfargbtn"
+        >
 
     </Button>
 
