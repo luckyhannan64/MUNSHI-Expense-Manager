@@ -15,7 +15,7 @@
         android:hint="enter your best email"
         android:id="@+id/email"
         android:textAlignment="center"
-        ></EditText>
+        android:gravity="center_horizontal" />
 
     <EditText
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
         android:id="@+id/un"
         android:layout_marginTop="10dp"
         android:textAlignment="center"
-        ></EditText>
+        android:gravity="center_horizontal"></EditText>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,9 +34,7 @@
         android:id="@+id/password"
         android:layout_marginTop="10dp"
         android:textAlignment="center"
-
-
-        ></EditText>
+        android:gravity="center_horizontal"></EditText>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,9 +43,7 @@
         android:id="@+id/rpw"
         android:layout_marginTop="10dp"
         android:textAlignment="center"
-
-
-        ></EditText>
+        android:gravity="center_horizontal"></EditText>
 
     <Button
         android:layout_marginLeft="10dp"

@@ -12,7 +12,6 @@ import android.widget.Button;
 
 public class login_activity extends AppCompatActivity {
 
-    Button loginbtn;
     Button skipbtn;
     Button subbtn;
 
@@ -21,46 +20,22 @@ public class login_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        skipbtn = (Button) findViewById(R.id.skipbtn);
+        if (savedInstanceState == null) {
+            FragmentManager Fragmentmanager = getSupportFragmentManager();
+            FragmentTransaction FragmentTransaction = Fragmentmanager.beginTransaction();
+            FragmentTransaction.replace(R.id.userfrag, new FragmentLogin());
+            FragmentTransaction.commit();
+        }
 
+        skipbtn = (Button) findViewById(R.id.skipbtn);
         subbtn = findViewById(R.id.signupbutton);
 
-        subbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                replacefrag (new sign_up_frag());
-            }
-
-            private void replacefrag(sign_up_frag sign_up_frag) {
-                FragmentManager Fragmentmanger = getSupportFragmentManager();
-                FragmentTransaction FragmentTransaction = Fragmentmanger.beginTransaction();
-                FragmentTransaction.replace(R.id.userfrag,sign_up_frag);
-                FragmentTransaction.commit();
-            }
-        });
-
-
-        loginbtn = findViewById(R.id.loginbtn);
-
-        loginbtn.setOnClickListener(new View.OnClickListener()
-
-        {
-            @Override
-            public void onClick (View v){
-                replaceFragment(new FragmentLogin());
-            }
-
-            private void replaceFragment (FragmentLogin fragmentLogin){
-                FragmentManager Fragmentmanger = getSupportFragmentManager();
-                FragmentTransaction FragmentTransaction = Fragmentmanger.beginTransaction();
-                FragmentTransaction.replace(R.id.userfrag, fragmentLogin);
-                FragmentTransaction.commit();
-
-            }
-
-        });
-
-
+       subbtn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               opensignup();
+           }
+       });
 
         skipbtn.setOnClickListener(new View.OnClickListener() {
 
@@ -68,15 +43,19 @@ public class login_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openskip();
+
             }
         });
+        }
+    private void opensignup() {
+        Intent intent = new Intent(this, Activity_SignUp.class);
+        startActivity(intent);
     }
 
     public void openskip() {
 
-        Intent intent = new Intent(this, home_activity.class);
+        Intent intent = new Intent(this, Activity_SignUp.class);
         startActivity(intent);
 
-}
-
+    }
 }
