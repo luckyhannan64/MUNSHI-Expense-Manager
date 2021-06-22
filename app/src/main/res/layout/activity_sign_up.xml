@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".sign_up_frag"
     android:orientation="vertical"
-    android:id="@+id/sign_frag"
+    tools:context=".Activity_SignUp"
     >
 
     <EditText
@@ -13,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="enter your best email"
-        android:id="@+id/email"
+        android:id="@+id/emailsignup"
         android:textAlignment="center"
         android:gravity="center_horizontal" />
 
@@ -21,26 +20,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="enter your usename"
-        android:layout_below="@id/email"
-        android:id="@+id/un"
+        android:layout_below="@id/emailsignup"
+        android:id="@+id/usernamesignup"
         android:layout_marginTop="10dp"
         android:textAlignment="center"
         android:gravity="center_horizontal"></EditText>
     <EditText
+        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="enter your password"
-        android:layout_below="@id/un"
-        android:id="@+id/password"
+        android:layout_below="@id/usernamesignup"
+        android:id="@+id/passwordsignup"
         android:layout_marginTop="10dp"
         android:textAlignment="center"
         android:gravity="center_horizontal"></EditText>
     <EditText
+        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Please confirm your password"
-        android:layout_below="@id/password"
-        android:id="@+id/rpw"
+        android:layout_below="@id/passwordsignup"
+        android:id="@+id/repasswordsignup"
         android:layout_marginTop="10dp"
         android:textAlignment="center"
         android:gravity="center_horizontal"></EditText>
@@ -50,11 +51,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="sign up"
-        android:layout_below="@id/rpw"
+        android:layout_below="@id/repasswordsignup"
         android:layout_marginTop="10dp"
         android:id="@+id/sumbitfargbtn"
         >
-
     </Button>
 
 </RelativeLayout>
