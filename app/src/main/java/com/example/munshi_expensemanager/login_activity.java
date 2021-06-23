@@ -34,6 +34,8 @@ public class login_activity extends AppCompatActivity {
         skipbtn = findViewById(R.id.skipbtn);
         subbtn = findViewById(R.id.signupbtn);
         login = findViewById(R.id.loginbtn);
+        edittext1 = findViewById(R.id.usernametextlogin);
+        edittext2 = findViewById(R.id.passwordlogin);
 
         mAuth = FirebaseAuth.getInstance();
 

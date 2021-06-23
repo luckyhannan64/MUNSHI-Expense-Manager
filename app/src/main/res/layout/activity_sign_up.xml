@@ -13,13 +13,15 @@
         android:layout_height="wrap_content"
         android:hint="enter your best email"
         android:id="@+id/emailsignup"
+        android:inputType="textEmailAddress"
         android:textAlignment="center"
         android:gravity="center_horizontal" />
 
     <EditText
         android:layout_width="match_parent"
+        android:inputType="text"
         android:layout_height="wrap_content"
-        android:hint="enter your usename"
+        android:hint="enter your username"
         android:layout_below="@id/emailsignup"
         android:id="@+id/usernamesignup"
         android:layout_marginTop="10dp"
