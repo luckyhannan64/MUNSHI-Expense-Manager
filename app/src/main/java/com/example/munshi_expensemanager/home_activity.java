@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,39 +20,73 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Map;
 
 public class home_activity extends AppCompatActivity {
-    ImageButton transactionbtn,chartsbtn,balancebtn,accountsbtn,budgetbtn,expensesbtn;
+    ImageButton Trans_btn,Balance_btn,Accounts_btn,budget_btn,Expenses_btn,Charts_btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        transactionbtn = findViewById(R.id.img_transaction);
-        chartsbtn = findViewById(R.id.img_charts);
-        balancebtn = findViewById(R.id.img_balance);
-        accountsbtn = findViewById(R.id.img_accounts);
-        budgetbtn = findViewById(R.id.img_budget);
-        expensesbtn = findViewById(R.id.img_expenses);
+    Trans_btn = findViewById(R.id.img_transaction);
+    Balance_btn =findViewById(R.id.img_balance);
+    Accounts_btn = findViewById(R.id.img_accounts);
+    budget_btn = findViewById(R.id.img_budget);
+    Expenses_btn = findViewById(R.id.img_expenses);
+    Charts_btn = findViewById(R.id.img_charts);
 
-     transactionbtn.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-             opentrans();
-         }
-
-
-     });
-     expensesbtn.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-             openexpense();
-         }
-     });
+    Trans_btn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            open_trans();
+        }
+    });
+        Balance_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                open_balance();
+            }
+        });
+        Accounts_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                open_accounts();
+            }
+        });
+        budget_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                open_budget();
+            }
+        });
+        Expenses_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                open_expense();
+            }
+        });
+        Charts_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                open_charts();
+            }
+        });
 
     }
-    private void opentrans() {
+    private void open_trans() {
         getSupportFragmentManager().beginTransaction().replace(R.id.Fagment_framlayout_home,new FragmentTransaction()).commit();
     }
-    private void openexpense() {
+    private void open_balance() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.Fagment_framlayout_home,new FragmentBalance()).commit();
+    }
+    private void open_budget() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.Fagment_framlayout_home,new FragmentBudget()).commit();
+    }
+    private void open_expense() {
         getSupportFragmentManager().beginTransaction().replace(R.id.Fagment_framlayout_home,new FragmentExpense()).commit();
     }
-
+    private void open_charts() {
+         getSupportFragmentManager().beginTransaction().replace(R.id.Fagment_framlayout_home,new FragmentCharts()).commit();
+    }
+    private void open_accounts() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.Fagment_framlayout_home,new FragmentAccounts()).commit();
+    }
 }
