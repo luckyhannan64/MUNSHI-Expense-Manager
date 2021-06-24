@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MUNSHIExpenseManager">
-        <activity android:name=".Activity_SignUp"></activity>
+        <activity android:name=".Activity_SignUp" />
         <activity android:name=".home_activity" />
         <activity android:name=".login_activity" />
         <activity android:name=".MainActivity">
