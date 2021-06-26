@@ -72,21 +72,33 @@ public class home_activity extends AppCompatActivity {
 
     }
     private void open_trans() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.Fagment_framlayout_home,new FragmentTransaction()).commit();
+        Intent intent = new Intent(getApplicationContext(),Fragments_buttons.class);
+        intent.putExtra("key",5);
+        startActivity(intent);
     }
     private void open_balance() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.Fagment_framlayout_home,new FragmentBalance()).commit();
+        Intent intent = new Intent(getApplicationContext(),Fragments_buttons.class);
+        intent.putExtra("key",4);
+        startActivity(intent);
     }
     private void open_budget() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.Fagment_framlayout_home,new FragmentBudget()).commit();
+        Intent intent = new Intent(getApplicationContext(),Fragments_buttons.class);
+        intent.putExtra("key",3);
+        startActivity(intent);
     }
     private void open_expense() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.Fagment_framlayout_home,new FragmentExpense()).commit();
+        Intent intent = new Intent(getApplicationContext(),Fragments_buttons.class);
+        intent.putExtra("key",2);
+        startActivity(intent);
     }
     private void open_charts() {
-         getSupportFragmentManager().beginTransaction().replace(R.id.Fagment_framlayout_home,new FragmentCharts()).commit();
+        Intent intent = new Intent(getApplicationContext(),Fragments_buttons.class);
+        intent.putExtra("key",6);
+        startActivity(intent);
     }
     private void open_accounts() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.Fagment_framlayout_home,new FragmentAccounts()).commit();
+        Intent intent = new Intent(getApplicationContext(),Fragments_buttons.class);
+        intent.putExtra("key",1);
+        startActivity(intent);
     }
 }
